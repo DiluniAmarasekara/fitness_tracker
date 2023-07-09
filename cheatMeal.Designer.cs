@@ -1,6 +1,6 @@
 ﻿namespace fitness_tracker
 {
-    partial class workout
+    partial class cheatMeal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,82 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAdd = new Button();
-            btnView = new Button();
-            btnUpdate = new Button();
-            wkPnlLoader = new Panel();
             btnDelete = new Button();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnView = new Button();
+            cmPnlLoader = new Panel();
             SuspendLayout();
-            // 
-            // btnAdd
-            // 
-            btnAdd.Location = new Point(154, 12);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(132, 32);
-            btnAdd.TabIndex = 1;
-            btnAdd.Text = "Add Workout";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
-            // 
-            // btnView
-            // 
-            btnView.Location = new Point(12, 12);
-            btnView.Name = "btnView";
-            btnView.Size = new Size(132, 32);
-            btnView.TabIndex = 2;
-            btnView.Text = "View Workout";
-            btnView.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.Location = new Point(296, 12);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(132, 32);
-            btnUpdate.TabIndex = 3;
-            btnUpdate.Text = "Update Workout";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
-            // 
-            // wkPnlLoader
-            // 
-            wkPnlLoader.Location = new Point(2, 50);
-            wkPnlLoader.Name = "wkPnlLoader";
-            wkPnlLoader.Size = new Size(580, 364);
-            wkPnlLoader.TabIndex = 4;
-            wkPnlLoader.Paint += workoutPnlLoader_Paint;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(438, 12);
+            btnDelete.Location = new Point(439, 12);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(132, 32);
-            btnDelete.TabIndex = 5;
-            btnDelete.Text = "Delete Workout";
+            btnDelete.TabIndex = 9;
+            btnDelete.Text = "Delete Cheat Meals";
             btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
             // 
-            // workout
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(155, 12);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(132, 32);
+            btnAdd.TabIndex = 6;
+            btnAdd.Text = "Add Cheat Meals";
+            btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(297, 12);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(132, 32);
+            btnUpdate.TabIndex = 8;
+            btnUpdate.Text = "Update Cheat Meals";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnView
+            // 
+            btnView.Location = new Point(13, 12);
+            btnView.Name = "btnView";
+            btnView.Size = new Size(132, 32);
+            btnView.TabIndex = 7;
+            btnView.Text = "View Cheat Meals";
+            btnView.UseVisualStyleBackColor = true;
+            // 
+            // cmPnlLoader
+            // 
+            cmPnlLoader.Location = new Point(1, 50);
+            cmPnlLoader.Name = "cmPnlLoader";
+            cmPnlLoader.Size = new Size(580, 364);
+            cmPnlLoader.TabIndex = 10;
+            // 
+            // cheatMeal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(582, 415);
+            Controls.Add(cmPnlLoader);
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
-            Controls.Add(wkPnlLoader);
             Controls.Add(btnUpdate);
             Controls.Add(btnView);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "workout";
-            Text = "workout";
+            Name = "cheatMeal";
+            Text = "cheatMeal";
             ResumeLayout(false);
         }
 
         #endregion
-        private Button btnAdd;
-        private Button btnView;
-        private Button btnUpdate;
-        private Panel wkPnlLoader;
+
         private Button btnDelete;
+        private Button btnAdd;
+        private Button btnUpdate;
+        private Button btnView;
+        private Panel cmPnlLoader;
     }
 }

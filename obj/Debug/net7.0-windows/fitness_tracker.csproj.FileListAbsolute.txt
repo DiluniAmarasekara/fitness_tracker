@@ -39,3 +39,4 @@ C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\obj\Debug\ne
 C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\obj\Debug\net7.0-windows\fitness_tracker.pdb
 C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\obj\Debug\net7.0-windows\fitness_tracker.genruntimeconfig.cache
 C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\obj\Debug\net7.0-windows\ref\fitness_tracker.dll
+C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\obj\Debug\net7.0-windows\fitness_tracker.cheatMeal.resources

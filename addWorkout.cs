@@ -12,9 +12,29 @@ namespace fitness_tracker
 {
     public partial class addWorkout : Form
     {
-        public addWorkout()
+        public addWorkout(int buttonFlag)
         {
             InitializeComponent();
+            if (buttonFlag == 1)
+            {
+                btnDelete.Enabled = false;
+                btnUpdate.Enabled = false;
+            }
+            else if(buttonFlag == 2)
+            {
+                btnDelete.Enabled = false;
+                btnSubmit.Enabled = false;
+            }
+            else if (buttonFlag == 3)
+            {
+                btnUpdate.Enabled = false;
+                btnSubmit.Enabled = false;
+            }
+        }
+
+        private void addWorkout_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

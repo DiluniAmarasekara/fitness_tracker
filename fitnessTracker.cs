@@ -80,6 +80,13 @@ public partial class fitnessTracker : Form
         pnlNav.Height = btnMeal.Height;
         pnlNav.Top = btnMeal.Top;
         btnMeal.BackColor = Color.FromArgb(46, 51, 73);
+
+        lblTitle.Text = "Cheat Meal";
+        this.pnlFormLoader.Controls.Clear();
+        cheatMeal FrmDashboard_Vrb = new cheatMeal() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        FrmDashboard_Vrb.FormBorderStyle = FormBorderStyle.None;
+        this.pnlFormLoader.Controls.Add(FrmDashboard_Vrb);
+        FrmDashboard_Vrb.Show();
     }
 
     private void btnAnalytics_Click(object sender, EventArgs e)

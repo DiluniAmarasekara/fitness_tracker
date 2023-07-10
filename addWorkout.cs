@@ -107,8 +107,10 @@ namespace fitness_tracker
 
             List<Exercise> itemsSelected = new List<Exercise>();
 
+            
+
             exerciseItems.ForEach(ex => {
-                if (checkedListExercise.SelectedItems.Contains(ex.getExerciseName())) {
+                if (checkedListExercise.CheckedItems.Contains(ex.getExerciseName())) {
                     itemsSelected.Add(ex);
                 }
             });
@@ -119,7 +121,7 @@ namespace fitness_tracker
                 cmd.Parameters.AddWithValue("workout_id", workoutId.Text);
                 cmd.ExecuteNonQuery();
             });
-            MessageBox.Show("Your workout plan has been adde!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Your workout plan has been added!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void checkedListExercise_SelectedIndexChanged(object sender, EventArgs e)

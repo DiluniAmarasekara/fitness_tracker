@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -42,6 +43,10 @@
             workoutId = new ComboBox();
             btnReset = new Button();
             btnDelete = new Button();
+            errorProviderWk = new ErrorProvider(components);
+            label6 = new Label();
+            workoutName = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)errorProviderWk).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -56,7 +61,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(347, 20);
+            label3.Location = new Point(314, 75);
             label3.Name = "label3";
             label3.Size = new Size(43, 20);
             label3.TabIndex = 2;
@@ -73,24 +78,24 @@
             // 
             // dateFrom
             // 
-            dateFrom.Location = new Point(421, 12);
+            dateFrom.Location = new Point(446, 75);
             dateFrom.Margin = new Padding(3, 4, 3, 4);
             dateFrom.Name = "dateFrom";
-            dateFrom.Size = new Size(228, 27);
+            dateFrom.Size = new Size(205, 27);
             dateFrom.TabIndex = 4;
             // 
             // dateTo
             // 
-            dateTo.Location = new Point(421, 64);
+            dateTo.Location = new Point(446, 133);
             dateTo.Margin = new Padding(3, 4, 3, 4);
             dateTo.Name = "dateTo";
-            dateTo.Size = new Size(228, 27);
+            dateTo.Size = new Size(205, 27);
             dateTo.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(347, 72);
+            label5.Location = new Point(314, 133);
             label5.Name = "label5";
             label5.Size = new Size(25, 20);
             label5.TabIndex = 5;
@@ -105,6 +110,7 @@
             checkedListExercise.Size = new Size(137, 114);
             checkedListExercise.TabIndex = 7;
             checkedListExercise.SelectedIndexChanged += checkedListExercise_SelectedIndexChanged;
+            checkedListExercise.Validating += checkedListExercise_Validating;
             // 
             // btnSubmit
             // 
@@ -144,6 +150,7 @@
             goalName.Name = "goalName";
             goalName.Size = new Size(138, 28);
             goalName.TabIndex = 11;
+            goalName.Validating += goalName_Validating;
             // 
             // workoutId
             // 
@@ -174,12 +181,34 @@
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
+            // errorProviderWk
+            // 
+            errorProviderWk.ContainerControl = this;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(314, 16);
+            label6.Name = "label6";
+            label6.Size = new Size(109, 20);
+            label6.TabIndex = 15;
+            label6.Text = "Workout Name";
+            // 
+            // workoutName
+            // 
+            workoutName.Location = new Point(446, 13);
+            workoutName.Name = "workoutName";
+            workoutName.Size = new Size(125, 27);
+            workoutName.TabIndex = 16;
+            // 
             // addWorkout
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(663, 485);
+            Controls.Add(workoutName);
+            Controls.Add(label6);
             Controls.Add(btnDelete);
             Controls.Add(btnReset);
             Controls.Add(workoutId);
@@ -199,6 +228,7 @@
             Name = "addWorkout";
             Text = "addWorkout";
             Load += addWorkout_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProviderWk).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -219,5 +249,8 @@
         private ComboBox workoutId;
         private Button btnReset;
         private Button btnDelete;
+        private ErrorProvider errorProviderWk;
+        private TextBox workoutName;
+        private Label label6;
     }
 }

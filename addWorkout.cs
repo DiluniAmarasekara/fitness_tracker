@@ -52,7 +52,13 @@ namespace fitness_tracker
                 eventFlag = 3;
                 btnUpdate.Visible = false;
                 btnSubmit.Visible = false;
+
                 workLoadIds_Load(con);
+                goalName.Enabled = false;
+                workoutName.Enabled = false;
+                dateFrom.Enabled = false;
+                dateTo.Enabled = false;
+                checkedListExercise.Enabled = false;
             }
         }
 
@@ -191,7 +197,7 @@ namespace fitness_tracker
 
         private void workoutId_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (eventFlag == 2)
+            if (eventFlag == 2 || eventFlag == 3)
             {
                 WorkoutSchedule workoutSchedule = workoutItems.FirstOrDefault(i => i.getWorkoutId() == workoutId.SelectedIndex + 1);
                 Goal goal = goalItems.FirstOrDefault(i => i.getGoalId() == workoutSchedule.getGoalId());
@@ -258,6 +264,19 @@ namespace fitness_tracker
                 cmd.ExecuteNonQuery();
             });
             MessageBox.Show("Your workout plan has been updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("delete from workout_exercise where workout_id=@workout_id", cn);
+            cmd.Parameters.AddWithValue("workout_id", workoutId.Text);
+            cmd.ExecuteNonQuery();
+
+            cmd = new SqlCommand("delete from workout where workout_id=@workout_id", cn);
+            cmd.Parameters.AddWithValue("workout_id", workoutId.Text);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Your workout plan has been deleted!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

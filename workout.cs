@@ -15,6 +15,12 @@ namespace fitness_tracker
         public workout()
         {
             InitializeComponent();
+
+            this.wkPnlLoader.Controls.Clear();
+            workoutSummary ViewWorkout = new workoutSummary() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ViewWorkout.FormBorderStyle = FormBorderStyle.None;
+            this.wkPnlLoader.Controls.Add(ViewWorkout);
+            ViewWorkout.Show();
         }
 
         private void workoutPnlLoader_Paint(object sender, PaintEventArgs e)
@@ -47,6 +53,20 @@ namespace fitness_tracker
             FrmDeleteWorkout.FormBorderStyle = FormBorderStyle.None;
             this.wkPnlLoader.Controls.Add(FrmDeleteWorkout);
             FrmDeleteWorkout.Show();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            this.wkPnlLoader.Controls.Clear();
+            workoutSummary ViewWorkout = new workoutSummary() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ViewWorkout.FormBorderStyle = FormBorderStyle.None;
+            this.wkPnlLoader.Controls.Add(ViewWorkout);
+            ViewWorkout.Show();
+        }
+
+        private void workout_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

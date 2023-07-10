@@ -278,5 +278,19 @@ namespace fitness_tracker
 
             MessageBox.Show("Your workout plan has been deleted!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            resetComponents();
+        }
+
+        private void resetComponents()
+        {
+            this.Controls.Clear();
+            addWorkout ResetWorkout = new addWorkout(eventFlag) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            ResetWorkout.FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(ResetWorkout);
+            ResetWorkout.Show();
+        }
     }
 }

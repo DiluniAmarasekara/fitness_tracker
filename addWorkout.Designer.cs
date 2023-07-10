@@ -172,6 +172,7 @@
             btnReset.TabIndex = 13;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnDelete
             // 

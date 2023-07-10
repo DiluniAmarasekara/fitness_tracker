@@ -51,12 +51,12 @@ namespace fitness_tracker.models
             this.calories = calories;
         }
 
-        public Int64 getWorkout()
+        public Int64 getWorkoutId()
         {
             return workoutId;
         }
 
-        public void setWorkout(Int64 workoutId)
+        public void setWorkoutId(Int64 workoutId)
         {
             this.workoutId = workoutId;
         }

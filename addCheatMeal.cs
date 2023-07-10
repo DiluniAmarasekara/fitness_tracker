@@ -211,5 +211,24 @@ namespace fitness_tracker
             MessageBox.Show("Your cheatmeal has been deleted!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             resetComponents();
         }
+
+        private void cheatId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (eventFlag == 2 || eventFlag == 3)
+            {
+                CheatMeals cheatMealObj = cheatmealItems.FirstOrDefault(i => i.getCheatId() == cheatId.SelectedIndex + 1);
+
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("select * from cheat_meal where cheat_id=@cheat_id", con);
+                cmd.Parameters.AddWithValue("cheat_id", cheatId.Text);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                workoutId.SelectedIndex = (int)cheatMealObj.getWorkoutId()-1;
+                calories.Text = cheatMealObj.getCalories();
+                dateCheat.Value = cheatMealObj.getDateOfCheat();
+            }
+        }
     }
 }

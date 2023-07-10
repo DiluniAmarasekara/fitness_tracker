@@ -153,6 +153,7 @@
             cheatId.Name = "cheatId";
             cheatId.Size = new Size(151, 28);
             cheatId.TabIndex = 12;
+            cheatId.SelectedIndexChanged += cheatId_SelectedIndexChanged;
             // 
             // errorProviderCm
             // 

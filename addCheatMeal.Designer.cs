@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label3 = new Label();
-            dateWorkout = new DateTimePicker();
+            dateCheat = new DateTimePicker();
             label4 = new Label();
             workoutId = new ComboBox();
-            mealName = new TextBox();
+            calories = new TextBox();
             label5 = new Label();
             btnReset = new Button();
             btnSubmit = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
             cheatId = new ComboBox();
+            errorProviderCm = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProviderCm).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -60,12 +63,13 @@
             label3.TabIndex = 2;
             label3.Text = "Cheat Date";
             // 
-            // dateWorkout
+            // dateCheat
             // 
-            dateWorkout.Location = new Point(128, 151);
-            dateWorkout.Name = "dateWorkout";
-            dateWorkout.Size = new Size(250, 27);
-            dateWorkout.TabIndex = 3;
+            dateCheat.Location = new Point(128, 151);
+            dateCheat.Name = "dateCheat";
+            dateCheat.Size = new Size(250, 27);
+            dateCheat.TabIndex = 3;
+            dateCheat.Validating += dateWorkout_Validating;
             // 
             // label4
             // 
@@ -83,22 +87,24 @@
             workoutId.Name = "workoutId";
             workoutId.Size = new Size(151, 28);
             workoutId.TabIndex = 5;
+            workoutId.Validating += workoutId_Validating;
             // 
-            // mealName
+            // calories
             // 
-            mealName.Location = new Point(128, 220);
-            mealName.Name = "mealName";
-            mealName.Size = new Size(125, 27);
-            mealName.TabIndex = 6;
+            calories.Location = new Point(128, 220);
+            calories.Name = "calories";
+            calories.Size = new Size(125, 27);
+            calories.TabIndex = 6;
+            calories.Validating += calories_Validating;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(27, 223);
             label5.Name = "label5";
-            label5.Size = new Size(42, 20);
+            label5.Size = new Size(62, 20);
             label5.TabIndex = 7;
-            label5.Text = "Meal";
+            label5.Text = "Calories";
             // 
             // btnReset
             // 
@@ -108,6 +114,7 @@
             btnReset.TabIndex = 8;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnSubmit
             // 
@@ -117,6 +124,7 @@
             btnSubmit.TabIndex = 9;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // btnUpdate
             // 
@@ -126,6 +134,7 @@
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -135,6 +144,7 @@
             btnDelete.TabIndex = 11;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // cheatId
             // 
@@ -143,6 +153,10 @@
             cheatId.Name = "cheatId";
             cheatId.Size = new Size(151, 28);
             cheatId.TabIndex = 12;
+            // 
+            // errorProviderCm
+            // 
+            errorProviderCm.ContainerControl = this;
             // 
             // addCheatMeal
             // 
@@ -156,15 +170,17 @@
             Controls.Add(btnSubmit);
             Controls.Add(btnReset);
             Controls.Add(label5);
-            Controls.Add(mealName);
+            Controls.Add(calories);
             Controls.Add(workoutId);
             Controls.Add(label4);
-            Controls.Add(dateWorkout);
+            Controls.Add(dateCheat);
             Controls.Add(label3);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "addCheatMeal";
             Text = "addCheatMeal";
+            Load += addCheatMeal_Load;
+            ((System.ComponentModel.ISupportInitialize)errorProviderCm).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -173,15 +189,16 @@
 
         private Label label1;
         private Label label3;
-        private DateTimePicker dateWorkout;
+        private DateTimePicker dateCheat;
         private Label label4;
         private ComboBox workoutId;
-        private TextBox mealName;
+        private TextBox calories;
         private Label label5;
         private Button btnReset;
         private Button btnSubmit;
         private Button btnUpdate;
         private Button btnDelete;
         private ComboBox cheatId;
+        private ErrorProvider errorProviderCm;
     }
 }

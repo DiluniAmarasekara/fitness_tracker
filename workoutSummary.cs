@@ -24,8 +24,6 @@ namespace fitness_tracker
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("select * from workout", con);
 
-            //SqlCommand cmd2 = new SqlCommand("select e.exercise_name from exercise e left join workout_exercise we in e.exercise_id=we.exercise_id where we.workout_id==@workout_id", con);
-            //cmd2.Parameters.AddWithValue("workout_id", workoutName.Text);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             sda.Fill(ds, "Workout");

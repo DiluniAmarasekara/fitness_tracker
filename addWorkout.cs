@@ -158,6 +158,7 @@ namespace fitness_tracker
                 cmd.ExecuteNonQuery();
             });
             MessageBox.Show("Your workout plan has been added!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            resetComponents();
         }
 
         private void checkedListExercise_SelectedIndexChanged(object sender, EventArgs e)
@@ -264,6 +265,7 @@ namespace fitness_tracker
                 cmd.ExecuteNonQuery();
             });
             MessageBox.Show("Your workout plan has been updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            resetComponents();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -277,6 +279,7 @@ namespace fitness_tracker
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Your workout plan has been deleted!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            resetComponents();
         }
 
         private void btnReset_Click(object sender, EventArgs e)

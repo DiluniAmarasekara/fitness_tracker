@@ -26,7 +26,7 @@ namespace fitness_tracker
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.cmPnlLoader.Controls.Clear();
-            addCheatMeal FrmAddCheatMeal = new addCheatMeal() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            addCheatMeal FrmAddCheatMeal = new addCheatMeal(1) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmAddCheatMeal.FormBorderStyle = FormBorderStyle.None;
             this.cmPnlLoader.Controls.Add(FrmAddCheatMeal);
             FrmAddCheatMeal.Show();
@@ -35,7 +35,7 @@ namespace fitness_tracker
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             this.cmPnlLoader.Controls.Clear();
-            addCheatMeal FrmUpdateCheatMeal = new addCheatMeal() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            addCheatMeal FrmUpdateCheatMeal = new addCheatMeal(2) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmUpdateCheatMeal.FormBorderStyle = FormBorderStyle.None;
             this.cmPnlLoader.Controls.Add(FrmUpdateCheatMeal);
             FrmUpdateCheatMeal.Show();
@@ -44,7 +44,7 @@ namespace fitness_tracker
         private void btnDelete_Click(object sender, EventArgs e)
         {
             this.cmPnlLoader.Controls.Clear();
-            addCheatMeal FrmDeleteCheatMeal = new addCheatMeal() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            addCheatMeal FrmDeleteCheatMeal = new addCheatMeal(3) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmDeleteCheatMeal.FormBorderStyle = FormBorderStyle.None;
             this.cmPnlLoader.Controls.Add(FrmDeleteCheatMeal);
             FrmDeleteCheatMeal.Show();

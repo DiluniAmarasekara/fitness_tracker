@@ -132,6 +132,7 @@
             btnUpdate.TabIndex = 9;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label2
             // 
@@ -160,6 +161,7 @@
             workoutId.Name = "workoutId";
             workoutId.Size = new Size(138, 28);
             workoutId.TabIndex = 12;
+            workoutId.SelectedIndexChanged += workoutId_SelectedIndexChanged;
             // 
             // btnReset
             // 

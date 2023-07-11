@@ -52,68 +52,80 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkGray;
             label1.Location = new Point(14, 23);
             label1.Name = "label1";
-            label1.Size = new Size(82, 20);
+            label1.Size = new Size(89, 21);
             label1.TabIndex = 0;
             label1.Text = "Workout Id";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.DarkGray;
             label3.Location = new Point(314, 75);
             label3.Name = "label3";
-            label3.Size = new Size(43, 20);
+            label3.Size = new Size(47, 21);
             label3.TabIndex = 2;
             label3.Text = "From";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.DarkGray;
             label4.Location = new Point(14, 133);
             label4.Name = "label4";
-            label4.Size = new Size(62, 20);
+            label4.Size = new Size(68, 21);
             label4.TabIndex = 3;
             label4.Text = "Exercise";
             // 
             // dateFrom
             // 
+            dateFrom.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             dateFrom.Location = new Point(446, 75);
             dateFrom.Margin = new Padding(3, 4, 3, 4);
             dateFrom.Name = "dateFrom";
-            dateFrom.Size = new Size(205, 27);
+            dateFrom.Size = new Size(205, 28);
             dateFrom.TabIndex = 4;
             // 
             // dateTo
             // 
+            dateTo.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             dateTo.Location = new Point(446, 133);
             dateTo.Margin = new Padding(3, 4, 3, 4);
             dateTo.Name = "dateTo";
-            dateTo.Size = new Size(205, 27);
+            dateTo.Size = new Size(205, 28);
             dateTo.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.DarkGray;
             label5.Location = new Point(314, 133);
             label5.Name = "label5";
-            label5.Size = new Size(25, 20);
+            label5.Size = new Size(26, 21);
             label5.TabIndex = 5;
             label5.Text = "To";
             // 
             // checkedListExercise
             // 
+            checkedListExercise.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             checkedListExercise.FormattingEnabled = true;
             checkedListExercise.Location = new Point(117, 133);
             checkedListExercise.Margin = new Padding(3, 4, 3, 4);
             checkedListExercise.Name = "checkedListExercise";
-            checkedListExercise.Size = new Size(137, 114);
+            checkedListExercise.Size = new Size(176, 96);
             checkedListExercise.TabIndex = 7;
             checkedListExercise.SelectedIndexChanged += checkedListExercise_SelectedIndexChanged;
             checkedListExercise.Validating += checkedListExercise_Validating;
             // 
             // btnSubmit
             // 
+            btnSubmit.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSubmit.Location = new Point(219, 339);
             btnSubmit.Margin = new Padding(3, 4, 3, 4);
             btnSubmit.Name = "btnSubmit";
@@ -125,6 +137,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.Location = new Point(337, 339);
             btnUpdate.Margin = new Padding(3, 4, 3, 4);
             btnUpdate.Name = "btnUpdate";
@@ -137,34 +150,39 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkGray;
             label2.Location = new Point(14, 75);
             label2.Name = "label2";
-            label2.Size = new Size(40, 20);
+            label2.Size = new Size(42, 21);
             label2.TabIndex = 10;
             label2.Text = "Goal";
             // 
             // goalName
             // 
+            goalName.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             goalName.FormattingEnabled = true;
             goalName.Location = new Point(115, 68);
             goalName.Margin = new Padding(3, 4, 3, 4);
             goalName.Name = "goalName";
-            goalName.Size = new Size(138, 28);
+            goalName.Size = new Size(138, 29);
             goalName.TabIndex = 11;
             goalName.Validating += goalName_Validating;
             // 
             // workoutId
             // 
+            workoutId.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             workoutId.FormattingEnabled = true;
             workoutId.Location = new Point(115, 12);
             workoutId.Margin = new Padding(3, 4, 3, 4);
             workoutId.Name = "workoutId";
-            workoutId.Size = new Size(138, 28);
+            workoutId.Size = new Size(138, 29);
             workoutId.TabIndex = 12;
             workoutId.SelectedIndexChanged += workoutId_SelectedIndexChanged;
             // 
             // btnReset
             // 
+            btnReset.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnReset.Location = new Point(100, 339);
             btnReset.Margin = new Padding(3, 4, 3, 4);
             btnReset.Name = "btnReset";
@@ -176,6 +194,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.Location = new Point(457, 339);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
@@ -192,17 +211,20 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.DarkGray;
             label6.Location = new Point(314, 16);
             label6.Name = "label6";
-            label6.Size = new Size(109, 20);
+            label6.Size = new Size(117, 21);
             label6.TabIndex = 15;
             label6.Text = "Workout Name";
             // 
             // workoutName
             // 
+            workoutName.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             workoutName.Location = new Point(446, 13);
             workoutName.Name = "workoutName";
-            workoutName.Size = new Size(125, 27);
+            workoutName.Size = new Size(205, 28);
             workoutName.TabIndex = 16;
             // 
             // addWorkout

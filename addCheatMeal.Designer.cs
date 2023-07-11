@@ -48,66 +48,78 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkGray;
             label1.Location = new Point(27, 24);
             label1.Name = "label1";
-            label1.Size = new Size(64, 20);
+            label1.Size = new Size(69, 21);
             label1.TabIndex = 0;
             label1.Text = "Cheat Id";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.DarkGray;
             label3.Location = new Point(27, 151);
             label3.Name = "label3";
-            label3.Size = new Size(83, 20);
+            label3.Size = new Size(89, 21);
             label3.TabIndex = 2;
             label3.Text = "Cheat Date";
             // 
             // dateCheat
             // 
+            dateCheat.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             dateCheat.Location = new Point(128, 151);
             dateCheat.Name = "dateCheat";
-            dateCheat.Size = new Size(250, 27);
+            dateCheat.Size = new Size(250, 28);
             dateCheat.TabIndex = 3;
             dateCheat.Validating += dateWorkout_Validating;
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.DarkGray;
             label4.Location = new Point(27, 85);
             label4.Name = "label4";
-            label4.Size = new Size(82, 20);
+            label4.Size = new Size(89, 21);
             label4.TabIndex = 4;
             label4.Text = "Workout Id";
             // 
             // workoutId
             // 
+            workoutId.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             workoutId.FormattingEnabled = true;
             workoutId.Location = new Point(128, 82);
             workoutId.Name = "workoutId";
-            workoutId.Size = new Size(151, 28);
+            workoutId.Size = new Size(151, 29);
             workoutId.TabIndex = 5;
             workoutId.Validating += workoutId_Validating;
             // 
             // calories
             // 
+            calories.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             calories.Location = new Point(128, 220);
             calories.Name = "calories";
-            calories.Size = new Size(125, 27);
+            calories.Size = new Size(125, 28);
             calories.TabIndex = 6;
             calories.Validating += calories_Validating;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.DarkGray;
             label5.Location = new Point(27, 223);
             label5.Name = "label5";
-            label5.Size = new Size(62, 20);
+            label5.Size = new Size(66, 21);
             label5.TabIndex = 7;
             label5.Text = "Calories";
             // 
             // btnReset
             // 
+            btnReset.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnReset.Location = new Point(39, 358);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(94, 29);
@@ -118,6 +130,7 @@
             // 
             // btnSubmit
             // 
+            btnSubmit.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSubmit.Location = new Point(205, 358);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(94, 29);
@@ -128,6 +141,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.Location = new Point(366, 358);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(94, 29);
@@ -138,6 +152,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.Location = new Point(527, 358);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
@@ -148,10 +163,11 @@
             // 
             // cheatId
             // 
+            cheatId.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             cheatId.FormattingEnabled = true;
             cheatId.Location = new Point(128, 21);
             cheatId.Name = "cheatId";
-            cheatId.Size = new Size(151, 28);
+            cheatId.Size = new Size(151, 29);
             cheatId.TabIndex = 12;
             cheatId.SelectedIndexChanged += cheatId_SelectedIndexChanged;
             // 

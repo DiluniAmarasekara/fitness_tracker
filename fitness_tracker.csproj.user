@@ -19,6 +19,9 @@
     <Compile Update="fitnessTracker.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="workout.cs">
       <SubType>Form</SubType>
     </Compile>

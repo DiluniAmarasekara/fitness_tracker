@@ -225,7 +225,7 @@ namespace fitness_tracker
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                workoutId.SelectedIndex = (int)cheatMealObj.getWorkoutId()-1;
+                workoutId.SelectedIndex = (int)cheatMealObj.getWorkoutId() - 1;
                 calories.Text = cheatMealObj.getCalories();
                 dateCheat.Value = cheatMealObj.getDateOfCheat();
             }

@@ -42,6 +42,9 @@
             // 
             // dataGridTable
             // 
+            dataGridTable.AllowUserToAddRows = false;
+            dataGridTable.AllowUserToDeleteRows = false;
+            dataGridTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dataGridTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridTable.Location = new Point(12, 133);
             dataGridTable.Name = "dataGridTable";
@@ -52,71 +55,84 @@
             // 
             // dateFrom
             // 
+            dateFrom.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             dateFrom.Location = new Point(94, 22);
             dateFrom.Name = "dateFrom";
-            dateFrom.Size = new Size(188, 27);
+            dateFrom.Size = new Size(188, 28);
             dateFrom.TabIndex = 1;
             // 
             // dateTo
             // 
+            dateTo.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             dateTo.Location = new Point(94, 73);
             dateTo.Name = "dateTo";
-            dateTo.Size = new Size(188, 27);
+            dateTo.Size = new Size(188, 28);
             dateTo.TabIndex = 2;
             // 
             // selectCombo
             // 
+            selectCombo.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             selectCombo.FormattingEnabled = true;
             selectCombo.Items.AddRange(new object[] { "Workout", "Exercise", "Cheat Meal", "Weight" });
             selectCombo.Location = new Point(459, 24);
             selectCombo.Name = "selectCombo";
-            selectCombo.Size = new Size(151, 28);
+            selectCombo.Size = new Size(151, 29);
             selectCombo.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.DarkGray;
             label1.Location = new Point(342, 26);
             label1.Name = "label1";
-            label1.Size = new Size(98, 20);
+            label1.Size = new Size(106, 21);
             label1.TabIndex = 4;
             label1.Text = "Select Report";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkGray;
             label2.Location = new Point(32, 24);
             label2.Name = "label2";
-            label2.Size = new Size(43, 20);
+            label2.Size = new Size(47, 21);
             label2.TabIndex = 5;
             label2.Text = "From";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.DarkGray;
             label3.Location = new Point(32, 73);
             label3.Name = "label3";
-            label3.Size = new Size(25, 20);
+            label3.Size = new Size(26, 21);
             label3.TabIndex = 6;
             label3.Text = "To";
             // 
             // btnSearch
             // 
+            btnSearch.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearch.Location = new Point(459, 74);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(151, 29);
             btnSearch.TabIndex = 7;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // btnDownload
             // 
+            btnDownload.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btnDownload.Location = new Point(459, 397);
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(151, 48);
             btnDownload.TabIndex = 8;
             btnDownload.Text = "Download";
             btnDownload.UseVisualStyleBackColor = true;
+            btnDownload.Click += btnDownload_Click;
             // 
             // report
             // 

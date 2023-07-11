@@ -103,7 +103,7 @@
             btnAnalytics.Name = "btnAnalytics";
             btnAnalytics.Size = new Size(249, 47);
             btnAnalytics.TabIndex = 4;
-            btnAnalytics.Text = "Analytics";
+            btnAnalytics.Text = "Predictions";
             btnAnalytics.UseVisualStyleBackColor = true;
             btnAnalytics.Click += btnAnalytics_Click;
             btnAnalytics.Leave += btnAnalytics_Leave;

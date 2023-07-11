@@ -90,7 +90,12 @@ public partial class fitnessTracker : Form
         pnlNav.Height = btnAnalytics.Height;
         pnlNav.Top = btnAnalytics.Top;
 
-        lblTitle.Text = "Analytics";
+        lblTitle.Text = "Predictions";
+        this.pnlFormLoader.Controls.Clear();
+        predictions Predictions_Vrb = new predictions() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        Predictions_Vrb.FormBorderStyle = FormBorderStyle.None;
+        this.pnlFormLoader.Controls.Add(Predictions_Vrb);
+        Predictions_Vrb.Show();
     }
 
     private void btnDashboard_Leave(object sender, EventArgs e)

@@ -24,6 +24,7 @@ namespace fitness_tracker
         SqlCommand cmd;
         SqlConnection cn;
         SqlDataReader dr;
+        double currentBMI;
 
         public dashboard()
         {
@@ -41,7 +42,7 @@ namespace fitness_tracker
             int inches = int.Parse(parts[1]);
             int totalInches = feet * 12 + inches;
             double meters = totalInches * 0.0254;
-            double currentBMI = double.Parse(weight.Text) / (meters * meters);
+            currentBMI = double.Parse(weight.Text) / (meters * meters);
 
             if (currentBMI < 18.5)
             {
@@ -97,8 +98,9 @@ namespace fitness_tracker
             cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
             cn.Open();
 
-            cmd = new SqlCommand("update goal set current_weight=@current_weight where goal_id=@goal_id", cn);
+            cmd = new SqlCommand("update goal set current_weight=@current_weight, bmi=@bmi where goal_id=@goal_id", cn);
             cmd.Parameters.AddWithValue("current_weight", todayWeight.Text);
+            cmd.Parameters.AddWithValue("bmi", currentBMI.ToString("F1"));
             cmd.Parameters.AddWithValue("goal_id", goalId.Text);
             cmd.ExecuteNonQuery();
 

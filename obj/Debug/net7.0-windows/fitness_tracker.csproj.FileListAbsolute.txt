@@ -56,3 +56,6 @@ C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\bin\Debug\ne
 C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\bin\Debug\net7.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\bin\Debug\net7.0-windows\WinForms.DataVisualization.dll
 C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\obj\Debug\net7.0-windows\fitness_tracker.predictions.resources
+C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\bin\Debug\net7.0-windows\LiveCharts.dll
+C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\bin\Debug\net7.0-windows\LiveCharts.WinForms.dll
+C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\bin\Debug\net7.0-windows\LiveCharts.Wpf.dll

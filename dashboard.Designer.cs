@@ -248,9 +248,9 @@
             // panelBmi
             // 
             panelBmi.BackColor = Color.FromArgb(0, 192, 0);
-            panelBmi.Controls.Add(label7);
             panelBmi.Controls.Add(bmiPred);
-            panelBmi.Location = new Point(284, 220);
+            panelBmi.Controls.Add(label7);
+            panelBmi.Location = new Point(284, 246);
             panelBmi.Name = "panelBmi";
             panelBmi.Size = new Size(318, 105);
             panelBmi.TabIndex = 17;
@@ -260,7 +260,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(26, 18);
+            label7.Location = new Point(26, 39);
             label7.Name = "label7";
             label7.Size = new Size(89, 21);
             label7.TabIndex = 18;
@@ -271,7 +271,7 @@
             bmiPred.AutoSize = true;
             bmiPred.Font = new Font("Calibri", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             bmiPred.ForeColor = Color.Black;
-            bmiPred.Location = new Point(148, 53);
+            bmiPred.Location = new Point(159, 39);
             bmiPred.Name = "bmiPred";
             bmiPred.Size = new Size(96, 24);
             bmiPred.TabIndex = 0;

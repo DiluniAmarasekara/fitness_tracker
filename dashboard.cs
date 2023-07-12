@@ -1,4 +1,5 @@
 ﻿using fitness_tracker.models;
+using iTextSharp.text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Configurations;
+using LiveCharts.Defaults;
+using LiveCharts.WinForms;
+using LiveCharts.Wpf;
 
 namespace fitness_tracker
 {
@@ -17,6 +24,7 @@ namespace fitness_tracker
         SqlCommand cmd;
         SqlConnection cn;
         SqlDataReader dr;
+
         public dashboard()
         {
             cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
@@ -33,19 +41,19 @@ namespace fitness_tracker
             int inches = int.Parse(parts[1]);
             int totalInches = feet * 12 + inches;
             double meters = totalInches * 0.0254;
-            double bmi = double.Parse(weight.Text) / (meters * meters);
+            double currentBMI = double.Parse(weight.Text) / (meters * meters);
 
-            if (bmi < 18.5)
+            if (currentBMI < 18.5)
             {
                 bmiPred.Text = "Underweight";
                 panelBmi.BackColor = Color.OrangeRed;
             }
-            else if (bmi >= 18.5 && bmi < 25)
+            else if (currentBMI >= 18.5 && currentBMI < 25)
             {
                 bmiPred.Text = "Normal weight";
                 panelBmi.BackColor = Color.Green;
             }
-            else if (bmi >= 25 && bmi < 30)
+            else if (currentBMI >= 25 && currentBMI < 30)
             {
                 bmiPred.Text = "Overweight";
                 panelBmi.BackColor = Color.Orange;
@@ -55,6 +63,7 @@ namespace fitness_tracker
                 bmiPred.Text = "Obese";
                 panelBmi.BackColor = Color.Red;
             }
+
         }
 
         private void loadData()

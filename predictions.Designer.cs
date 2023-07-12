@@ -28,7 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panelChart = new Panel();
+            labelInsight = new Label();
             SuspendLayout();
+            // 
+            // panelChart
+            // 
+            panelChart.Location = new Point(12, 85);
+            panelChart.Name = "panelChart";
+            panelChart.Size = new Size(641, 396);
+            panelChart.TabIndex = 0;
+            // 
+            // labelInsight
+            // 
+            labelInsight.AutoSize = true;
+            labelInsight.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelInsight.ForeColor = Color.Gray;
+            labelInsight.Location = new Point(12, 20);
+            labelInsight.Name = "labelInsight";
+            labelInsight.Size = new Size(65, 21);
+            labelInsight.TabIndex = 1;
+            labelInsight.Text = "Insights";
             // 
             // predictions
             // 
@@ -36,12 +56,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(665, 553);
+            Controls.Add(labelInsight);
+            Controls.Add(panelChart);
             FormBorderStyle = FormBorderStyle.None;
             Name = "predictions";
             Text = "Predictions";
+            Load += predictions_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Panel panelChart;
+        private Label labelInsight;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7r23cy+URFCSy9D72tkOXrI408XYbC/ZyuX4CG2utyEZAxTkeUL//ljcXbdW/ojijAUQ2cphZGoS09gJezhGog==",
+  "dgSpecHash": "MB81KVnaVhE5JGH3tWmVB7VD19laIGKcPfkC06a8yxPJIoYPlAZioyJQ9Z7rmNXIniL28ByuEQgKCqj5uNJJ7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\OneDrive\\Documents\\MSc\\Enterprise\\cw1\\fitness_tracker\\fitness_tracker.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\DELL\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\winforms.datavisualization\\1.8.0\\winforms.datavisualization.1.8.0.nupkg.sha512"
   ],
   "logs": [
     {

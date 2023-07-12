@@ -132,7 +132,6 @@ namespace fitness_tracker
 
             long goalId = goalItems.FirstOrDefault(i => i.getPurpose() == goalName.Text).getGoalId();
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
             cmd = new SqlCommand("insert into workout values(@from_date, @to_date, @workout_name, @goal_id)", cn);
             cmd.Parameters.AddWithValue("from_date", Convert.ToDateTime(dateFrom.Value));
             cmd.Parameters.AddWithValue("to_date", Convert.ToDateTime(dateTo.Value));
@@ -141,7 +140,6 @@ namespace fitness_tracker
             cmd.ExecuteNonQuery();
 
             List<Exercise> itemsSelected = new List<Exercise>();
-
             exerciseItems.ForEach(ex =>
             {
                 if (checkedListExercise.CheckedItems.Contains(ex.getExerciseName()))
@@ -159,11 +157,6 @@ namespace fitness_tracker
             });
             MessageBox.Show("Your workout plan has been added!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             resetComponents();
-        }
-
-        private void checkedListExercise_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void goalName_Validating(object sender, CancelEventArgs e)
@@ -234,7 +227,6 @@ namespace fitness_tracker
             long goalId = goalItems.FirstOrDefault(i => i.getPurpose() == goalName.Text).getGoalId();
             long workoutScheId = workoutItems.FirstOrDefault(i => i.getWorkoutId() == workoutId.SelectedIndex + 1).getWorkoutId();
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
             cmd = new SqlCommand("update workout set from_date=@from_date, to_date=@to_date, workout_name=@workout_name, goal_id=@goal_id where workout_id=@workout_id", cn);
             cmd.Parameters.AddWithValue("from_date", Convert.ToDateTime(dateFrom.Value));
             cmd.Parameters.AddWithValue("to_date", Convert.ToDateTime(dateTo.Value));

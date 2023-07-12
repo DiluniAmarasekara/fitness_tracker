@@ -148,8 +148,8 @@ namespace fitness_tracker
                 double predictedWeight = intercept + slope * futureTimePoint;
                 predictedWeights.Add(predictedWeight);
             }
-
             return predictedWeights;
         }
+
     }
 }

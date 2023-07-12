@@ -120,7 +120,6 @@
             checkedListExercise.Name = "checkedListExercise";
             checkedListExercise.Size = new Size(176, 96);
             checkedListExercise.TabIndex = 7;
-            checkedListExercise.SelectedIndexChanged += checkedListExercise_SelectedIndexChanged;
             checkedListExercise.Validating += checkedListExercise_Validating;
             // 
             // btnSubmit

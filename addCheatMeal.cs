@@ -160,8 +160,8 @@ namespace fitness_tracker
             long cheatMealNo = cheatmealItems.FirstOrDefault(i => i.getCheatId() == cheatId.SelectedIndex + 1).getCheatId();
             long workoutNo = workoutItems.FirstOrDefault(i => i.getWorkoutId() == workoutId.SelectedIndex + 1).getWorkoutId();
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
-            cmd = new SqlCommand("update cheat_meal set date_of_cheat=@date_of_cheat, meal=@meal, workout_id=@workout_id where cheat_id=@cheat_id", cn);
+            cmd = new SqlCommand("update cheat_meal set date_of_cheat=@date_of_cheat, meal=@meal, " +
+                "workout_id=@workout_id where cheat_id=@cheat_id", cn);
             cmd.Parameters.AddWithValue("date_of_cheat", Convert.ToDateTime(dateCheat.Value));
             cmd.Parameters.AddWithValue("meal", calories.Text);
             cmd.Parameters.AddWithValue("workout_id", workoutNo);
@@ -186,7 +186,6 @@ namespace fitness_tracker
             ValidateChildren(ValidationConstraints.Enabled);
             long workoutNo = workoutItems.FirstOrDefault(i => i.getWorkoutId() == workoutId.SelectedIndex + 1).getWorkoutId();
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DELL\OneDrive\Documents\MSc\Enterprise\cw1\fitness_tracker\Database.mdf;Integrated Security=True");
             cmd = new SqlCommand("insert into cheat_meal values(@date_of_cheat, @meal, @workout_id)", cn);
             cmd.Parameters.AddWithValue("date_of_cheat", Convert.ToDateTime(dateCheat.Value));
             cmd.Parameters.AddWithValue("meal", calories.Text);
